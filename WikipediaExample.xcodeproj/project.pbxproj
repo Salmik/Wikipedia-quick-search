@@ -3,27 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6E95F22647C7EB00731544 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E95F12647C7EB00731544 /* Coordinator.swift */; };
+		AC6E95F42647C87E00731544 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E95F32647C87E00731544 /* MainCoordinator.swift */; };
 		ACB7413A264786B20095FA96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74139264786B20095FA96 /* AppDelegate.swift */; };
 		ACB7413C264786B20095FA96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7413B264786B20095FA96 /* SceneDelegate.swift */; };
 		ACB7413E264786B20095FA96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB7413D264786B20095FA96 /* ViewController.swift */; };
-		ACB74141264786B20095FA96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB7413F264786B20095FA96 /* Main.storyboard */; };
 		ACB74143264786B30095FA96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB74142264786B30095FA96 /* Assets.xcassets */; };
 		ACB74146264786B30095FA96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB74144264786B30095FA96 /* LaunchScreen.storyboard */; };
+		ACB7414F264786EA0095FA96 /* WikipediaKit in Frameworks */ = {isa = PBXBuildFile; productRef = ACB7414E264786EA0095FA96 /* WikipediaKit */; };
+		ACB74151264798580095FA96 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB74150264798580095FA96 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC6E95F12647C7EB00731544 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AC6E95F32647C87E00731544 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		ACB74136264786B20095FA96 /* WikipediaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikipediaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB74139264786B20095FA96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB7413B264786B20095FA96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACB7413D264786B20095FA96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ACB74140264786B20095FA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACB74142264786B30095FA96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB74145264786B30095FA96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACB74147264786B30095FA96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB74150264798580095FA96 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB7414F264786EA0095FA96 /* WikipediaKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC6E95F52647CAC700731544 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E95F12647C7EB00731544 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AC6E95F62647CAD500731544 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E95F32647C87E00731544 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AC6E95F72647CAE400731544 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB7413D264786B20095FA96 /* ViewController.swift */,
+				ACB74150264798580095FA96 /* DetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		ACB7412D264786B20095FA96 = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +89,9 @@
 			children = (
 				ACB74139264786B20095FA96 /* AppDelegate.swift */,
 				ACB7413B264786B20095FA96 /* SceneDelegate.swift */,
-				ACB7413D264786B20095FA96 /* ViewController.swift */,
-				ACB7413F264786B20095FA96 /* Main.storyboard */,
+				AC6E95F72647CAE400731544 /* Controllers */,
+				AC6E95F52647CAC700731544 /* Protocols */,
+				AC6E95F62647CAD500731544 /* Coordinator */,
 				ACB74142264786B30095FA96 /* Assets.xcassets */,
 				ACB74144264786B30095FA96 /* LaunchScreen.storyboard */,
 				ACB74147264786B30095FA96 /* Info.plist */,
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = WikipediaExample;
+			packageProductDependencies = (
+				ACB7414E264786EA0095FA96 /* WikipediaKit */,
+			);
 			productName = WikipediaExample;
 			productReference = ACB74136264786B20095FA96 /* WikipediaExample.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +145,9 @@
 				Base,
 			);
 			mainGroup = ACB7412D264786B20095FA96;
+			packageReferences = (
+				ACB7414D264786EA0095FA96 /* XCRemoteSwiftPackageReference "WikipediaKit" */,
+			);
 			productRefGroup = ACB74137264786B20095FA96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +164,6 @@
 			files = (
 				ACB74146264786B30095FA96 /* LaunchScreen.storyboard in Resources */,
 				ACB74143264786B30095FA96 /* Assets.xcassets in Resources */,
-				ACB74141264786B20095FA96 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,22 +175,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB7413E264786B20095FA96 /* ViewController.swift in Sources */,
+				AC6E95F42647C87E00731544 /* MainCoordinator.swift in Sources */,
 				ACB7413A264786B20095FA96 /* AppDelegate.swift in Sources */,
+				AC6E95F22647C7EB00731544 /* Coordinator.swift in Sources */,
 				ACB7413C264786B20095FA96 /* SceneDelegate.swift in Sources */,
+				ACB74151264798580095FA96 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ACB7413F264786B20095FA96 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ACB74140264786B20095FA96 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ACB74144264786B30095FA96 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Salmik.WikipediaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Salmik.WikipediaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACB7414D264786EA0095FA96 /* XCRemoteSwiftPackageReference "WikipediaKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Raureif/WikipediaKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACB7414E264786EA0095FA96 /* WikipediaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACB7414D264786EA0095FA96 /* XCRemoteSwiftPackageReference "WikipediaKit" */;
+			productName = WikipediaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACB7412E264786B20095FA96 /* Project object */;
 }
